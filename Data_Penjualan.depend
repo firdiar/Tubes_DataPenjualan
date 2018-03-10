@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1520658862 source:d:\diske\pascall\c++\data_penjualan\libraryhandler.cpp
+	"LibraryHandler.h"
+
+1520656674 d:\diske\pascall\c++\data_penjualan\libraryhandler.h
+	<iostream>
+
+1520676860 source:d:\diske\pascall\c++\data_penjualan\main.cpp
+	"ProgramMenu.h"
+
+1520676552 d:\diske\pascall\c++\data_penjualan\programmenu.h
+	"LibraryHandler.h"
+	"Toko.h"
+	"Barang.h"
+	"DataManager.h"
+	<cstdlib>
+
+1520676714 source:d:\diske\pascall\c++\data_penjualan\programmenu.cpp
+	"ProgramMenu.h"
+
+1520660904 source:d:\diske\pascall\c++\data_penjualan\barang.cpp
+	"Barang.h"
+
+1520677340 source:d:\diske\pascall\c++\data_penjualan\datamanager.cpp
+	"DataManager.h"
+
+1520660395 source:d:\diske\pascall\c++\data_penjualan\toko.cpp
+	"Toko.h"
+	"DataManager.h"
+
+1520660078 d:\diske\pascall\c++\data_penjualan\toko.h
+	"LibraryHandler.h"
+
+1520660078 d:\diske\pascall\c++\data_penjualan\barang.h
+	"LibraryHandler.h"
+	"DataManager.h"
+
+1520676687 d:\diske\pascall\c++\data_penjualan\datamanager.h
+	"LibraryHandler.h"
+
