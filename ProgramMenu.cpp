@@ -17,7 +17,7 @@ void MainMenu(int &ans){
     cout << " 12. Exit" <<endl;
 
     do{
-        cout << " Silakan Pilih Menu Yang Anda Mau[1-10]" <<endl;
+        cout << " Silakan Pilih Menu Yang Anda Mau[1-12]" <<endl;
         cin>>ans;
     }while(ans > 12 || ans <= 0);
 
@@ -41,7 +41,7 @@ void TambahToko(List_DataT &L){
             cout<<" Data Sudah Ada"<<endl;
         }
         cout<<endl;
-        cout<<" Ingin Memasukan Barang Lagi?[Y/y]"<<endl;
+        cout<<" Ingin Memasukan Data Toko Lagi?[Y/y]"<<endl;
         cin>>nama;
     }while(nama == "Y" || nama == "y");
 }

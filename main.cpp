@@ -8,8 +8,6 @@ int main()
     List_DataT lToko = CreateList_DataT();
     List_DataManagerHandler lManager = CreateList_DataManager();
 
-    ///Memasukan Pointer List Kedalam Variabel Static
-
     int ans;
     string ansstr;
     do{
@@ -51,8 +49,12 @@ int main()
             break;
         }
 
-    cout <<" Kembali Ke Menu Utama?[Y/y]" << endl;
-    cin>>ansstr;
+        cout <<" Kembali Ke Menu Utama?[Y/y]" << endl;
+        cin>>ansstr;
+        if(ansstr != "Y" && ansstr != "y"){
+            cout <<" Yakin Ingin Keluar?[Y/y]" << endl;
+            cin>>ansstr;
+        }
     }while(ansstr == "Y" || ansstr == "y");
 
     return 0;
