@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1520658862 source:d:\diske\pascall\c++\data_penjualan\libraryhandler.cpp
+1521044423 source:d:\diske\pascall\c++\data_penjualan\libraryhandler.cpp
 	"LibraryHandler.h"
 
-1520656674 d:\diske\pascall\c++\data_penjualan\libraryhandler.h
+1521043588 d:\diske\pascall\c++\data_penjualan\libraryhandler.h
 	<iostream>
 
-1520676860 source:d:\diske\pascall\c++\data_penjualan\main.cpp
+1521044608 source:d:\diske\pascall\c++\data_penjualan\main.cpp
 	"ProgramMenu.h"
 
 1520676552 d:\diske\pascall\c++\data_penjualan\programmenu.h
@@ -15,23 +15,23 @@
 	"DataManager.h"
 	<cstdlib>
 
-1520676714 source:d:\diske\pascall\c++\data_penjualan\programmenu.cpp
+1521044657 source:d:\diske\pascall\c++\data_penjualan\programmenu.cpp
 	"ProgramMenu.h"
 
-1520660904 source:d:\diske\pascall\c++\data_penjualan\barang.cpp
+1521045660 source:d:\diske\pascall\c++\data_penjualan\barang.cpp
 	"Barang.h"
 
-1520677340 source:d:\diske\pascall\c++\data_penjualan\datamanager.cpp
+1521043795 source:d:\diske\pascall\c++\data_penjualan\datamanager.cpp
 	"DataManager.h"
 
-1520660395 source:d:\diske\pascall\c++\data_penjualan\toko.cpp
+1521046472 source:d:\diske\pascall\c++\data_penjualan\toko.cpp
 	"Toko.h"
 	"DataManager.h"
 
 1520660078 d:\diske\pascall\c++\data_penjualan\toko.h
 	"LibraryHandler.h"
 
-1520660078 d:\diske\pascall\c++\data_penjualan\barang.h
+1521043208 d:\diske\pascall\c++\data_penjualan\barang.h
 	"LibraryHandler.h"
 	"DataManager.h"
 

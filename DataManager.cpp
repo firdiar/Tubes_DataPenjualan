@@ -56,6 +56,7 @@ void Delete_DataM(List_DataManagerHandler &L , adr_Data P){
 
 ///Menghapus Data Dari Memory
 void DealocateB(adr_Data &P){
+    Next(P) = NULL;
     delete(P);
     P = NULL;
 }

@@ -2,10 +2,12 @@
 #define LIBRARYHANDLER_H_INCLUDED
 #define Info(A) A->Info
 #define Next(A) A->Next
+#define Prev(A) A->Prev
 
 #define Barang(A) A->Barang
 #define Toko(A) A->Toko
 #define First(A) A.First
+#define Last(A) A.Last
 
 
 #include <iostream>
@@ -29,15 +31,19 @@ struct InfoBarang{
 };
 
 ///elmListnya
+  ///DoubleList
 struct DataT{
     InfoToko Info;
     adr_T Next;
+    adr_T Prev;
 };
+    ///SinggleList
 struct DataManagerHandler{
     adr_T Toko;
     adr_B Barang;
     adr_Data Next;
 };
+ ///Singgle CircularList + Last
 struct DataB{
     InfoBarang Info;
     int Harga;
@@ -47,9 +53,11 @@ struct DataB{
 ///Listnya
 struct List_DataB{
     adr_B First;
+    adr_B Last;
 };
 struct List_DataT{
     adr_T First;
+    adr_T Last;
 };
 struct List_DataManagerHandler{
     adr_Data First;

@@ -3,10 +3,10 @@ Tubes 2018 STD Data Penjualan Dengan Multiple LinkList dan Single LinkList
 
 Script Structure
 
-DataManager | DataToko | DataBarang
-     |
-	 V
 LibraryHandler
+    |
+	V
+DataManager | DataToko | DataBarang
     |
 	V
 Program Menu
@@ -30,3 +30,7 @@ f. Menampilkan data keseluruhan toko beserta data barang yang dijualnya.		(Libra
 g. Menampilkan data barang yang dijual oleh toko tertentu.						(LibraryHandler.cpp : 103)
 h. Menampilkan data toko menjual barang tertentu.								(LibraryHandler.cpp : 121)
 i. Menampilkan data toko yang paling lengkap jualannya dan yang paling sedikit.	(DataManager.cpp : 129) (DataManager.cpp : 159)
+
+List_DataB 					- Singgle Circular + Last
+List_DataT 					- Double List
+List_DataManagerHandler 	- Singgle List

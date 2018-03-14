@@ -52,7 +52,7 @@ int main()
         cout <<" Kembali Ke Menu Utama?[Y/y]" << endl;
         cin>>ansstr;
         if(ansstr != "Y" && ansstr != "y"){
-            cout <<" Yakin Ingin Keluar?[Y/y]" << endl;
+            cout <<" Yakin Ingin Keluar? , Klik [Y/y] Untuk Kembali!" << endl;
             cin>>ansstr;
         }
     }while(ansstr == "Y" || ansstr == "y");

@@ -4,21 +4,28 @@
 
 ///Memasukan Data Kedalam List Dari Depan
 void InsertFirst_DataT(List_DataT &L , adr_T P){
-    Next(P) = First(L);
+    if(First(L) == NULL){
+        ///jika dia tidak berisi
+        Last(L) = P;
+    }else{
+        ///jika dia berisi
+        Prev(First(L)) = P;
+        Next(P) = First(L);
+    }
     First(L) = P;
 }
 
 ///Memasukan Data Kedalam List Dari Belakang
 void InsertLast_DataT(List_DataT &L , adr_T P){
-    adr_T q = First(L);
-    while(q != NULL && Next(q) != NULL){
-        q = Next(q);
-    }
-    if(q != NULL){
-        Next(q) = P;
+    if(Last(L)==NULL){
+        ///jika dia kosong
+        First(L)=P;
     }else{
-        First(L) = P;
+        ///jika dia berisi
+        Next(Last(L)) = P;
+        Prev(P) = Last(L);
     }
+    Last(L) = P;
 
 }
 
@@ -31,29 +38,45 @@ void Delete_DataT(List_DataT &L , List_DataManagerHandler &L2, adr_T &P){
 
     /// P Pasti Ada dalam List
     DeleteTokoInList( L2 , P);
-    adr_T z = NULL;
     adr_T q = First(L);
+
     while(q != P){
-        z = q;
+        ///Looping tidak infinity karena P pasti ada di dalam List
         q = Next(q);
     }
-    if(z != NULL){
-        ///jika P elm terakhir maka next z akan bernilai null
-        Next(z) = Next(P);
-    }else{
-        if(Next(P) != NULL){
-            First(L) = Next(P);
+
+    if(Next(q) == NULL){
+        ///jika data yg dihapus adalah elm terakhir
+        adr_T z = Prev(q);
+        if(q != First(L)){
+            ///jika dia di urutan terakhir z!= NULL
+            Next(z) = NULL;
         }else{
+            ///jika dia 1 elm
             First(L) = NULL;
+        }
+        Last(L) = z;
+    }else{
+        ///jika dia elm bukan di akhir
+        if(q == First(L)){
+            ///jika dia elm pertama
+            First(L) = Next(q);
+            Prev(First(L)) = NULL;
+        }else{
+            ///jika dia bukan elm pertama
+            adr_T z = Prev(q);
+            Next(z) = Next(q);
         }
     }
 
-
+    q = NULL;
     DealocateT(P);
 }
 
 ///Menghapus Data Dari Memory
 void DealocateT(adr_T &P){
+    Prev(P) = NULL;
+    Next(P) = NULL;
     delete(P);
     P = NULL;
 }

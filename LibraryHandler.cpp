@@ -5,6 +5,7 @@ void Allocate_DataT(adr_T &p , string nama){
     p = new DataT;
     Info(p).Nama = nama;
     Next(p) = NULL;
+    Prev(p) = NULL;
 }
 
 ///Membuat Balok Baru Barang
@@ -30,6 +31,7 @@ adr_T Allocate_DataT(string nama){
     adr_T  p = new DataT;
     Info(p).Nama = nama;
     Next(p) = NULL;
+    Prev(p) = NULL;
     return p;
 }
 
@@ -58,6 +60,7 @@ adr_Data Allocate_DataManager(adr_T TokoAdr , adr_B BarangAdr){
 List_DataT CreateList_DataT(){
     List_DataT p;
     First(p) = NULL;
+    Last(p) = NULL;
     return p;
 }
 
@@ -65,6 +68,7 @@ List_DataT CreateList_DataT(){
 List_DataB CreateList_DataB(){
     List_DataB p;
     First(p) = NULL;
+    Last(p) = NULL;
     return p;
 }
 
@@ -90,12 +94,14 @@ void Print_DataT(List_DataT L){
 void Print_DataB(List_DataB L){
     adr_B p = First(L);
     int i = 1;
-    while(p != NULL){
-        cout<<i<<". "<<Info(p).Nama<<endl;
-        cout<<"    Rp."<<Info(p).Harga;
-        p = Next(p);
-        i++;
-        cout<<endl;
+    if(p != NULL){
+        do{
+            cout<<i<<". "<<Info(p).Nama<<endl;
+            cout<<"    Rp."<<Info(p).Harga;
+            p = Next(p);
+            i++;
+            cout<<endl;
+        }while(p != First(L));
     }
 }
 
@@ -151,24 +157,14 @@ void Print_AllBarangInToko(List_DataT L , List_DataManagerHandler L2){
 void Print_AllBarangSellInToko(List_DataB L , List_DataManagerHandler L2){
 
     adr_B p = First(L);
-    while(p != NULL){
-        Print_BarangSellInToko(L2 , p);
-        p = Next(p);
-       // cout<<endl;
+    if(p != NULL){
+        do{
+            Print_BarangSellInToko(L2 , p);
+            p = Next(p);
+           // cout<<endl;
+        }while(p != First(L));
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 

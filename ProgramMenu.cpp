@@ -270,13 +270,13 @@ void TampilkanDataBarangCari(List_DataB L, List_DataManagerHandler L2){
         Print_DataB(L);
 
     do{
-        cout<<" Masukan Nama Toko : ";
+        cout<<" Masukan Nama Barang : ";
         cin>>input;
         cout<<endl;
 
         adr_B B = FindByNameB(L,input);
         if(B==NULL){
-            cout<<" Toko Tidak Dapat Ditemukan"<<endl;
+            cout<<" Barang Tidak Dapat Ditemukan"<<endl;
         }else{
             Print_BarangSellInToko(L2 , B);
         }
