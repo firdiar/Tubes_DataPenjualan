@@ -23,7 +23,8 @@ void MainMenu(int &ans){
 
 }
 
-///Menanmbahkan Data Toko di List Toko
+///implementasi insertLast
+///Menanmbahkan Data Toko di List Toko dari belakang
 void TambahToko(List_DataT &L){
      string nama;
      cout << " Menu Tambah Toko " <<endl;
@@ -47,7 +48,9 @@ void TambahToko(List_DataT &L){
 }
 
 
-///Menambahkan Data Barang Di List Barang
+
+///implementasi insertFirst
+///Menambahkan Data Barang Di List Barang dari depan
 void TambahBarang(List_DataB &L){
      string nama;
      cout << " Menu Tambah Barang " <<endl;
@@ -63,7 +66,7 @@ void TambahBarang(List_DataB &L){
             cin >> harga; cout<<endl;
             P = Allocate_DataB(nama , harga);
 
-            InsertLast_DataB(L , P);
+            InsertFirst_DataB(L , P);
 
             cout<<" Data Berhasil Dimasukan"<<endl;
         }else{
@@ -130,7 +133,7 @@ void HapusBarang(List_DataB &L , List_DataManagerHandler &L2){
 
 }
 
-
+///implementasi insertAfter
 ///Mengedit Barang yang Ada dii toko delete or add
 void EditBarangToko(List_DataT &L , List_DataB &L2 ,List_DataManagerHandler &L3){
 
@@ -168,7 +171,7 @@ void EditBarangToko(List_DataT &L , List_DataB &L2 ,List_DataManagerHandler &L3)
             if(input == "Y" || input == "y")
                 Print_DataB(L2);
 
-            ///menambahkan barang ke dalam toko
+            ///menambahkan barang ke dalam toko dengan insert after
             do{
                 cout<<" Masukan Nama Barang Yang Ingin Ditambah Kedalam Toko"<<endl;
                 cin>>nama;
