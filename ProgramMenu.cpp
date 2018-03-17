@@ -258,7 +258,7 @@ void TampilkanDataTokoCari(List_DataT L, List_DataManagerHandler L2){
         }else{
             Print_BarangInToko(L2 , T);
         }
-        cout<<" ingin Menampilkan Toko Lain"<<endl;
+        cout<<" ingin Menampilkan Toko Lain ?[Y/y]"<<endl;
         cin>>input;
     }while(input == "Y" || input == "y");
 
@@ -283,7 +283,7 @@ void TampilkanDataBarangCari(List_DataB L, List_DataManagerHandler L2){
         }else{
             Print_BarangSellInToko(L2 , B);
         }
-        cout<<" ingin Menampilkan Barang Lain"<<endl;
+        cout<<" ingin Menampilkan Barang Lain ?[Y/y]"<<endl;
         cin>>input;
     }while(input == "Y" || input == "y");
 
@@ -293,6 +293,11 @@ void TampilkanDataBarangCari(List_DataB L, List_DataManagerHandler L2){
 ///Menampilkan Toko Dengan Item Terbanyak
 void TampilkanTokoTerlengkap(List_DataManagerHandler L , List_DataT L2){
     adr_T T;
+    if(First(L2) == NULL){
+        cout<<" Belum Ada Toko Dimasukan"<<endl;
+        return;
+    }
+
     T = CariTerlengkap(L , L2);
     cout<<" Toko Terlengkap"<<endl;
     cout<<endl;
@@ -303,6 +308,12 @@ void TampilkanTokoTerlengkap(List_DataManagerHandler L , List_DataT L2){
 ///Menampilkan Toko Dengan Item Paling Sedikit
 void TampilkanTokoTerTaklengkap(List_DataManagerHandler L , List_DataT L2){
     adr_T T;
+
+     if(First(L2) == NULL){
+        cout<<" Belum Ada Toko Dimasukan"<<endl;
+        return;
+    }
+
     T = CariTerTaklengkap(L , L2);
     cout<<" Toko Paling Tidak Lengkap"<<endl;
     cout<<endl;
